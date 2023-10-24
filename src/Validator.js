@@ -17,7 +17,6 @@ export default class Validator {
 //   }
 }
 
-
 // const v = new Validator();
 // const schema = v.number();
 

@@ -1,16 +1,16 @@
 export default class ArraySchema {
-    validators = [(value) => Array.isArray(value)];
+  validators = [(value) => Array.isArray(value)];
 
-    isValid(value) {
+  isValid(value) {
     //   return this.validators.every((validator) => validator(value) === true);
 
-      const validations = this.validators.map((validator) => validator(value));
-      return !validations.includes(false);
-    }
+    const validations = this.validators.map((validator) => validator(value));
+    return !validations.includes(false);
+  }
 
-    length(num) {
-      const validator = (value) => (value !== null ? value.length === num : false);
-      this.validators.push(validator);
-      return this;
-    }
+  length(num) {
+    const validator = (value) => (value !== null ? value.length === num : false);
+    this.validators.push(validator);
+    return this;
+  }
 }
