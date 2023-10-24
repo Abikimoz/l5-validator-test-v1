@@ -1,9 +1,13 @@
-// /* eslint-disable class-methods-use-this */
+/* eslint-disable class-methods-use-this */
 import ArraySchema from './ArraySchema.js';
 import NumberSchema from './NumberSchema.js';
 // import ObjectSchema from './ObjectSchema.js';
 
 export default class Validator {
+  object() {
+    throw new Error('Method not implemented.');
+  }
+
   number() {
     return new NumberSchema();
   }

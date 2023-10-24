@@ -50,14 +50,17 @@ test('task4', () => {
 
 test('task5', () => {
   const validator = new Validator();
+  // @ts-ignore
   const schema1 = validator.object().shape({
     id: validator.number().odd(),
     basket: validator.array().length(3),
   });
+  // @ts-ignore
   const schema2 = validator.object().shape({
     id: validator.number().even(),
     basket: validator.array().length(1231233),
   });
+  // @ts-ignore
   const schema3 = validator.object().shape({
     id: validator.number().even(),
     basket: validator.array().length(2),
