@@ -1,9 +1,11 @@
 export default class ObjectSchema {
-  validators = {};
+  constructor(shapes) {
+    this.validators = shapes;
+  }
 
-  shape(fields) {
-    this.validators = Object.assign(this.validators, fields);
-    return this;
+  // eslint-disable-next-line
+    shape(fields) {
+    return new ObjectSchema(fields);
   }
 
   isValid(value) {
